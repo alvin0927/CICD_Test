@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         tvHello.setBackgroundColor(Color.BLUE);
         tvHello.setText("Hello，Jenkins");
 
+        tvHello.setTextColor(Color.RED);
     }
 
     private void initUI(){
