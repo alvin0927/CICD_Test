@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+def getJenkinsBuildNumber() {
+    def number = System.getenv("BUILD_NUMBER") as Integer ?: 0
+    return number
+}
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -9,6 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        project.ext.set("archivesBaseName", project.name + versionName + "-" + getJenkinsBuildNumber())
     }
     buildTypes {
         release {
