@@ -12,7 +12,12 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+//        testApplicationId "com.playground.buildcicd"
+        testHandleProfiling true
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+        testFunctionalTest true
+
         project.ext.set("archivesBaseName", project.name + versionName + "-" + getJenkinsBuildNumber())
     }
     buildTypes {
@@ -20,6 +25,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    // Encapsulates options for running tests.
+    testOptions {
+        reportDir "$rootDir/test-reports"
+        resultsDir "$rootDir/test-results"
     }
 }
 
