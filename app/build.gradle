@@ -5,6 +5,7 @@ def getJenkinsBuildNumber() {
     return number
 }
 android {
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.playground.buildcicd"
@@ -20,6 +21,7 @@ android {
 
         project.ext.set("archivesBaseName", project.name + versionName + "-" + getJenkinsBuildNumber())
     }
+
     buildTypes {
         release {
             minifyEnabled false
