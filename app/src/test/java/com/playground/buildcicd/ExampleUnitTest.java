@@ -21,6 +21,11 @@ public class ExampleUnitTest {
     }
 
     @Test
+    public void addition_isCorrect3() {
+        assertEquals(8, 4 + 4);
+    }
+
+    @Test
     /** 錯誤測試程式區段 */
     public void errorTestMethod() {
         assertEquals(3 , 2 + 2);
