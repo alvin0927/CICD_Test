@@ -14,4 +14,10 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    /** 錯誤測試程式區段 */
+    public void ErrorTestMethod() {
+        assertEquals(3 , 2 + 2);
+    }
 }
