@@ -30,4 +30,10 @@ public class ExampleUnitTest {
     public void errorTestMethod() {
         assertEquals(3 , 2 + 2);
     }
+
+    @Test
+    /** 錯誤測試程式區段 */
+    public void errorTestMethod2() {
+        assertEquals(5 , 1 + 1);
+    }
 }
