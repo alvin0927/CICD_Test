@@ -28,12 +28,12 @@ public class ExampleUnitTest {
     @Test
     /** 錯誤測試程式區段 */
     public void errorTestMethod() {
-        assertEquals(3 , 2 + 2);
+        assertEquals(3 , 2 + 1);
     }
 
     @Test
     /** 錯誤測試程式區段 */
     public void errorTestMethod2() {
-        assertEquals(5 , 1 + 6);
+        assertEquals(5 , 1 + 4);
     }
 }
