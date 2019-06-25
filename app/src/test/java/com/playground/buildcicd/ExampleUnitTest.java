@@ -34,6 +34,6 @@ public class ExampleUnitTest {
     @Test
     /** 錯誤測試程式區段 */
     public void errorTestMethod2() {
-        assertEquals(5 , 1 + 4);
+        assertEquals(5 , 1 + 6);
     }
 }
